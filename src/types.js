@@ -2,8 +2,8 @@ import { ViewPropTypes } from 'react-native';
 import { number, shape, string, node, bool } from 'prop-types';
 
 export const ShadowARTType = {
-  width: number.isRequired,
-  height: number.isRequired,
+  width: number,
+  height: number,
   borderRadius: number,
   shadowRadius: number,
   shadowOffset: shape({
@@ -20,8 +20,8 @@ export const InnerShadowType = {
   children: node,
   style: shape({
     ...ViewPropTypes.style,
-    width: number.isRequired,
-    height: number.isRequired,
+    width: number,
+    height: number,
   }),
 };
 
