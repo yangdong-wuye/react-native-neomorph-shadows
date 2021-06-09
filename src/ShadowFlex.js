@@ -25,7 +25,7 @@ export default class ShadowFlex extends React.PureComponent {
 
   _onLayout = ({ nativeEvent }) => {
     const { width, height } = nativeEvent.layout;
-    this.setState({
+    !this.state.layoutFinished && this.setState({
       shadowStyle: {
         ...this.state.shadowStyle,
         width,
